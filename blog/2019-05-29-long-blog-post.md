@@ -1,8 +1,8 @@
 ---
 slug: long-blog-post
 title: Long Blog Post
-authors: endi
-tags: [hello, docusaurus]
+authors: su
+tags: [Getcha, FrontEnd]
 ---
 
 This is the summary of a very long blog post,

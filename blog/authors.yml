@@ -1,17 +1,23 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+su:
+  name: Su
+  title: FrontEnd Developer
+  url: https://github.com/SoohyungJung
+  image_url: https://avatars.githubusercontent.com/u/32643248?v=4
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+clare:
+  name: Clare
+  title: FrontEnd Developer
+  url: https://github.com/claire-euni
+  image_url: https://avatars.githubusercontent.com/u/61927257?v=4
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+nick:
+  name: Nick
+  title: FrontEnd Developer
+  url: https://github.com/hojunin
+  image_url: https://avatars.githubusercontent.com/u/18079523?v=4
+
+bruno:
+  name: Bruno
+  title: FrontEnd Developer
+  url: https://github.com/bruno0126
+  image_url: https://avatars.githubusercontent.com/u/97155783?v=4

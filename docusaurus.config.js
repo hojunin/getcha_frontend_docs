@@ -46,15 +46,6 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "app-docs",
-        path: "app-docs",
-        routeBasePath: "app-docs",
-        sidebarPath: require.resolve("./sidebars.js"),
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
         id: "web-docs",
         path: "web-docs",
         routeBasePath: "web-docs",
@@ -86,12 +77,7 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Tutorial",
-          },
-          {
-            to: "/app-docs/intro",
             label: "앱",
-            position: "left",
           },
           {
             to: "/web-docs/intro",
