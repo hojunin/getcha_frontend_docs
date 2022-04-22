@@ -7,7 +7,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "겟차 프론트엔드 팀입니다",
-  tagline: "Guide Docs",
+  tagline: "개발 가이드",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -101,46 +101,37 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
+            title: "겟차 서비스",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "겟차",
+                href: "https://m.getcha.kr/",
+              },
+              {
+                label: "겟차 커머스",
+                href: "https://naver.com",
+              },
+              {
+                label: "겟차 중고차",
+                href: "https://github.com",
               },
             ],
           },
           {
-            title: "Community",
+            title: "동료를 찾아요!",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
+                label: "복지 & 동료",
                 to: "/blog",
               },
               {
-                label: "GitHub",
+                label: "지원 양식",
                 href: "https://github.com/facebook/docusaurus",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Getcha Team`,
       },
       prism: {
         theme: lightCodeTheme,
