@@ -125,7 +125,7 @@ const config = {
                 to: "/blog",
               },
               {
-                label: "지원 양식",
+                label: "지원하러 가기",
                 href: "https://github.com/facebook/docusaurus",
               },
             ],
