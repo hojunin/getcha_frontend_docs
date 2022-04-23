@@ -13,8 +13,8 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/getcha_favicon.ico",
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "getcha", // Usually your GitHub org/user name.
+  projectName: "getcha_frontend_docs", // Usually your repo name.
 
   presets: [
     [
@@ -25,15 +25,11 @@ const config = {
           routeBasePath: "docs",
           path: "docs",
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/hojunin/getcha_frontend_docs",
         },
         blog: {
           showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/hojunin/getcha_frontend_docs",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
