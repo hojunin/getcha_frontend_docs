@@ -1,11 +1,8 @@
 import React from "react";
-import clsx from "clsx";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
-  title: string;
   Svg: React.ComponentType<React.ComponentProps<"svg">>;
-  description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
@@ -29,7 +26,7 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ Svg }: FeatureItem) {
   return (
     <div className="text--center">
       <Svg className={styles.featureSvg} role="img" />
