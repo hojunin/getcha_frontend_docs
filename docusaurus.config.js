@@ -9,7 +9,7 @@ const config = {
   title: "겟차 프론트엔드 팀입니다",
   tagline: "개발 가이드",
   url: "https://your-docusaurus-test-site.com",
-  baseUrl: "/",
+  baseUrl: "/getcha_frontend_docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/getcha_favicon.ico",
