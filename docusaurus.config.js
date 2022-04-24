@@ -51,9 +51,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "hook-docs",
-        path: "hook-docs",
-        routeBasePath: "hook-docs",
+        id: "utils-docs",
+        path: "utils-docs",
+        routeBasePath: "utils-docs",
         sidebarPath: require.resolve("./sidebars.js"),
       },
     ],
@@ -62,6 +62,17 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { name: "Keywords", content: "겟차, 프론트엔드, 겟차 프론트엔드" },
+      ],
+      // algolia: {
+      //   appId: 'YOUR_APP_ID',
+      //   apiKey: 'YOUR_SEARCH_API_KEY',
+      //   indexName: 'YOUR_INDEX_NAME',
+      //   contextualSearch: true,
+      //   searchParameters: {},
+      //   searchPagePath: 'search',
+      // },
       navbar: {
         title: "겟차 프론트엔드 팀",
         logo: {
@@ -81,8 +92,8 @@ const config = {
             position: "left",
           },
           {
-            to: "/hook-docs/intro",
-            label: "훅",
+            to: "/utils-docs/intro",
+            label: "유틸",
             position: "left",
           },
           { to: "/blog", label: "블로그", position: "left" },

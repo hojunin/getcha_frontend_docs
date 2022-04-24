@@ -1,6 +1,6 @@
 ---
 id: intro
-title: 환영합니다
+title: Getcha App Components
 sidebar_position: 1
 ---
 
