@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgetcha_frontend=self.webpackChunkgetcha_frontend||[]).push([[3156],{7388:function(e){e.exports=JSON.parse('{"permalink":"/getcha_frontend_docs/en/blog/tags/front-end","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

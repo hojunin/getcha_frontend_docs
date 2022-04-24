@@ -7,7 +7,7 @@
         <lastBuildDate>Sun, 24 Apr 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <language>en</language>
+        <language>kr</language>
         <item>
             <title><![CDATA[도큐사우루스를 활용한 겟차 프론트엔드 팀 사이트 만들기]]></title>
             <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/team-blog</link>
