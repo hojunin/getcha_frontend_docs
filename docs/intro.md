@@ -1,6 +1,6 @@
 ---
 id: intro
-title: Getcha App Components
+title: Getcha App
 sidebar_position: 1
 ---
 
