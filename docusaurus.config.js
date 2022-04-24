@@ -16,6 +16,23 @@ const config = {
   organizationName: "getcha", // Usually your GitHub org/user name.
   projectName: "getcha_frontend_docs", // Usually your repo name.
 
+  i18n: {
+    defaultLocale: "kr",
+    locales: ["kr", "en"],
+    localeConfigs: {
+      kr: {
+        label: "한국어",
+        direction: "ltr",
+        htmlLang: "ko-KR",
+      },
+      en: {
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-US",
+      },
+    },
+  },
+
   presets: [
     [
       "classic",
@@ -100,6 +117,10 @@ const config = {
           {
             href: "https://m.getcha.kr",
             label: "겟차 놀러가기",
+            position: "right",
+          },
+          {
+            type: "localeDropdown",
             position: "right",
           },
         ],

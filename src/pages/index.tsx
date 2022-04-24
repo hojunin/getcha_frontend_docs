@@ -18,7 +18,7 @@ function HomepageHeader() {
             className="button button--secondary button--lg"
             to="/docs/intro"
           >
-            겟차 놀러가기
+            문서 보러가기
           </Link>
         </div>
       </div>
