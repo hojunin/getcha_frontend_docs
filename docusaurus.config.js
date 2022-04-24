@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "겟차 프론트엔드 팀입니다",
-  tagline: "개발 가이드",
+  title: "🚘 겟차 프론트엔드 팀입니다",
+  tagline: "React & React Native 개발 가이드",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/getcha_frontend_docs/",
   onBrokenLinks: "throw",
