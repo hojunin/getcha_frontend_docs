@@ -115,8 +115,8 @@ const config = {
           },
           { to: "/blog", label: "블로그", position: "left" },
           {
-            href: "https://m.getcha.kr",
-            label: "겟차 놀러가기",
+            href: "https://www.npmjs.com/package/getcha-react-ui-components",
+            label: "겟차 UI Components",
             position: "right",
           },
           {
