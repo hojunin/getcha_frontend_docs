@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-title: Input
+title: 입력
 ---
 
-# Input
+# 입력 컴포넌트
 
 Input 컴포넌트는 Getcha 어플리케이션 내의 입력에 사용되는 컴포넌트입니다.
 

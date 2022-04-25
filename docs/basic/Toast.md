@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: Toast
+title: 토스트
 ---
 
-# Toast
+# 토스트
