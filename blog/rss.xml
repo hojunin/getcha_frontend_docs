@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>🚘 겟차 프론트엔드 챕터입니다 Blog</title>
-        <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog</link>
+        <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog</link>
         <description>🚘 겟차 프론트엔드 챕터입니다 Blog</description>
         <lastBuildDate>Sun, 24 Apr 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <language>kr</language>
+        <language>en</language>
         <item>
             <title><![CDATA[도큐사우루스를 활용한 겟차 프론트엔드 팀 사이트 만들기]]></title>
-            <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/team-blog</link>
+            <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog/team-blog</link>
             <guid>team-blog</guid>
             <pubDate>Sun, 24 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[안녕하세요. Getcha 팀 FrontEnd 개발자 Nick입니다. 오늘은 페이스북의 정적 문서 생성 프레임워크인 도큐사우르스를 활용한 겟차 프론트엔드 팀 웹사이트 빌딩 과정을 소개하겠습니다.]]></description>
@@ -21,7 +21,7 @@ SEO나 i18n 국제화, 검색, 다크모드 같이 없으면 불편한 기능들
         </item>
         <item>
             <title><![CDATA[React Native Draggable Picker 만들기]]></title>
-            <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/Draggable Picker 만들기</link>
+            <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog/Draggable Picker 만들기</link>
             <guid>Draggable Picker 만들기</guid>
             <pubDate>Sat, 23 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[안녕하세요 Getcha Frontend 개발자 Nick입니다.]]></description>
@@ -34,7 +34,7 @@ SEO나 i18n 국제화, 검색, 다크모드 같이 없으면 불편한 기능들
         </item>
         <item>
             <title><![CDATA[javaScript Event Loop의 원리]]></title>
-            <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/event-loop</link>
+            <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog/event-loop</link>
             <guid>event-loop</guid>
             <pubDate>Sat, 23 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[👉 이 링크를 번역했습니다.]]></description>
@@ -44,7 +44,7 @@ SEO나 i18n 국제화, 검색, 다크모드 같이 없으면 불편한 기능들
         </item>
         <item>
             <title><![CDATA[팀원 외의 사람이 쓴 글]]></title>
-            <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/slug</link>
+            <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog/slug</link>
             <guid>slug</guid>
             <pubDate>Sun, 10 Apr 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[팀원 외에 다른사람도 글을 쓸 수 있습니다.]]></description>
@@ -53,7 +53,7 @@ SEO나 i18n 국제화, 검색, 다크모드 같이 없으면 불편한 기능들
         </item>
         <item>
             <title><![CDATA[리팩토링 계획]]></title>
-            <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/long</link>
+            <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog/long</link>
             <guid>long</guid>
             <pubDate>Thu, 24 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[리팩토링 계획을 만들어봤습니다.]]></description>
@@ -65,7 +65,7 @@ SEO나 i18n 국제화, 검색, 다크모드 같이 없으면 불편한 기능들
         </item>
         <item>
             <title><![CDATA[개발 블로그 오픈]]></title>
-            <link>https://your-docusaurus-test-site.com/getcha_frontend_docs/blog/mdx-blog-post</link>
+            <link>https://hojunin.github.io/getcha_frontend_docs/getcha_frontend_docs/blog/mdx-blog-post</link>
             <guid>mdx-blog-post</guid>
             <pubDate>Wed, 02 Mar 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[Blog posts support Docusaurus Markdown features, such as MDX.]]></description>

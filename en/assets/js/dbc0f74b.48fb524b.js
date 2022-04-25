@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgetcha_frontend=self.webpackChunkgetcha_frontend||[]).push([[1363],{1164:function(e){e.exports=JSON.parse('{"allTagsPath":"/getcha_frontend_docs/en/blog/tags","name":"react-native","count":1,"permalink":"/getcha_frontend_docs/en/blog/tags/react-native"}')}}]);
