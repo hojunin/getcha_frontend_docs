@@ -6,9 +6,9 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "🚘 겟차 프론트엔드 팀입니다",
+  title: "🚘 겟차 프론트엔드 챕터입니다",
   tagline: "React & React Native 개발 가이드",
-  url: "https://your-docusaurus-test-site.com",
+  url: "https://hojunin.github.io/getcha_frontend_docs/",
   baseUrl: "/getcha_frontend_docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -16,22 +16,22 @@ const config = {
   organizationName: "getcha", // Usually your GitHub org/user name.
   projectName: "getcha_frontend_docs", // Usually your repo name.
 
-  i18n: {
-    defaultLocale: "kr",
-    locales: ["kr", "en"],
-    localeConfigs: {
-      kr: {
-        label: "한국어",
-        direction: "ltr",
-        htmlLang: "ko-KR",
-      },
-      en: {
-        label: "English",
-        direction: "ltr",
-        htmlLang: "en-US",
-      },
-    },
-  },
+  // i18n: {
+  //   defaultLocale: "kr",
+  //   locales: ["kr", "en"],
+  //   localeConfigs: {
+  //     kr: {
+  //       label: "한국어",
+  //       direction: "ltr",
+  //       htmlLang: "ko-KR",
+  //     },
+  //     en: {
+  //       label: "English",
+  //       direction: "ltr",
+  //       htmlLang: "en-US",
+  //     },
+  //   },
+  // },
 
   presets: [
     [
@@ -82,16 +82,16 @@ const config = {
       metadata: [
         { name: "Keywords", content: "겟차, 프론트엔드, 겟차 프론트엔드" },
       ],
-      // algolia: {
-      //   appId: 'YOUR_APP_ID',
-      //   apiKey: 'YOUR_SEARCH_API_KEY',
-      //   indexName: 'YOUR_INDEX_NAME',
-      //   contextualSearch: true,
-      //   searchParameters: {},
-      //   searchPagePath: 'search',
-      // },
+      algolia: {
+        appId: "1AE76JL4OP",
+        apiKey: "e0f179e8ee37140bb5a083e9d4baaf67",
+        indexName: "getcha-frontend",
+        contextualSearch: true,
+        searchParameters: {},
+        searchPagePath: "search",
+      },
       navbar: {
-        title: "겟차 프론트엔드 팀",
+        title: "겟차 프론트엔드 챕터",
         logo: {
           alt: "Getcha_Logo",
           src: "img/getcha_logo.svg",
@@ -119,10 +119,10 @@ const config = {
             label: "겟차 UI Components",
             position: "right",
           },
-          {
-            type: "localeDropdown",
-            position: "right",
-          },
+          // {
+          //   type: "localeDropdown",
+          //   position: "right",
+          // },
         ],
       },
       footer: {
