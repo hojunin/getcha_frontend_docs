@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "🚘 겟차 프론트엔드 챕터입니다",
   tagline: "React & React Native 개발 가이드",
-  url: "https://hojunin.github.io/getcha_frontend_docs/",
+  url: "https://hojunin.github.io",
   baseUrl: "/getcha_frontend_docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

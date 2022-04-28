@@ -1,9 +1,0 @@
-.floatingButtonContainer {
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: blue;
-}
