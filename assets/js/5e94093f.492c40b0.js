@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgetcha_frontend=self.webpackChunkgetcha_frontend||[]).push([[6337],{9064:function(e){e.exports=JSON.parse('{"allTagsPath":"/getcha_frontend_docs/blog/tags","name":"Getcha","count":1,"permalink":"/getcha_frontend_docs/blog/tags/getcha"}')}}]);
