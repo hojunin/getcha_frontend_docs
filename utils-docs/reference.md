@@ -25,3 +25,5 @@ sidebar_position: 3
 ### [Reanimated2](https://docs.swmansion.com/react-native-reanimated/docs)
 
 ### [TS-toolbelt](https://millsp.github.io/ts-toolbelt/index.html)
+
+### [Lottie Guide](https://airbnb.io/lottie/#/)
