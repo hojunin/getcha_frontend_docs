@@ -75,8 +75,7 @@ Loading.close()
 | name          | type                             | 설명                                                                                                                                     | default    |
 | ------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------- |
 | isLoading     | boolean                          | 로딩 컴포넌트를 켜고 끄는 플래그입니다. 이 값을 true로 바꿔주면 로딩 컴포넌트가 최상단에 로드됩니다.                                     | false      |
-| status        | “loading” or “success” or “fail” | 로딩의 타입입니다. 기본값은 loading이고 success나 fail로 변화시킬 수 있습니다.                                                           |
-| “loading”     |
+| status        | “loading” or “success” or “fail” | 로딩의 타입입니다. 기본값은 loading이고 success나 fail로 변화시킬 수 있습니다.                                                           | “loading”  |
 | timeout       | number                           | 로딩의 타임아웃입니다. 해당 값만큼을 기다려주고, 그래도 close 메소드가 호출되지 않으면 실패로 간주하고 fail status로 변경 후 종료합니다. | 15 \* 1000 |
 | texts         | string[]                         | 로딩이 진행되는 동안 보여줄 text입니다.                                                                                                  | []         |
 | textsLoadTime | number                           | texts property를 노출할 시간입니다. texts의 배열 길이와 textsLoadTime 값을 통해 렌더링 로직을 결정합니다.                                | 0          |

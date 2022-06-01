@@ -124,6 +124,10 @@ return <Container>
 
 핵심 아이디어는, Class Component의 Static 메소드를 호출하고, 그 Static Method는 ref로 내부 method에 접근해서 state를 변경하는 방식입니다.
 
+:::tip
+javaScript에서 static 메소드는 class의 instance가 생성되기 전에 호출 가능합니다. instance를 만들게된다면 호출할 수 없어요.
+:::
+
 단점이라고 한다면 유지보수가 조금 어려워진다는 점인데, 모두가 Functional Component를 사용하고 있는데 Class Component를 사용해야한다는 점이에요.
 
 기본적으로 Functional Component에서는 static 메소드라는 개념이 없기 때문에 Class Component를 활용해요.
