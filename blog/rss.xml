@@ -7,7 +7,7 @@
         <lastBuildDate>Wed, 01 Jun 2022 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
-        <language>en</language>
+        <language>kr</language>
         <item>
             <title><![CDATA[겟차에서 모달을 컨트롤하는 방법]]></title>
             <link>https://hojunin.github.io/getcha_frontend_docs/blog/modal</link>
