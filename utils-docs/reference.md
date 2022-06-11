@@ -27,3 +27,5 @@ sidebar_position: 3
 ### [TS-toolbelt](https://millsp.github.io/ts-toolbelt/index.html)
 
 ### [Lottie Guide](https://airbnb.io/lottie/#/)
+
+### [Gesture Handler]("https://docs.swmansion.com/react-native-gesture-handler/")

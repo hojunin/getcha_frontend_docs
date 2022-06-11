@@ -1,4 +1,8 @@
 {
   "label": "훅",
-  "position": 2
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "이 문서에서는 자주 활용되는 훅(Hooks)을 설명합니다."
+  }
 }

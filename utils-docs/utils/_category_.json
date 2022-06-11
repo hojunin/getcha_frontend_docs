@@ -1,0 +1,8 @@
+{
+  "label": "유틸",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "이 문서에서는 자주 활용되는 유틸함수를 설명합니다."
+  }
+}
