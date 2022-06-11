@@ -13,25 +13,8 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/getcha_favicon.ico',
-    organizationName: 'getcha', // Usually your GitHub org/user name.
-    projectName: 'getcha_frontend_docs', // Usually your repo name.
-
-    // i18n: {
-    //   defaultLocale: "kr",
-    //   locales: ["kr", "en"],
-    //   localeConfigs: {
-    //     kr: {
-    //       label: "한국어",
-    //       direction: "ltr",
-    //       htmlLang: "ko-KR",
-    //     },
-    //     en: {
-    //       label: "English",
-    //       direction: "ltr",
-    //       htmlLang: "en-US",
-    //     },
-    //   },
-    // },
+    organizationName: 'getcha', 
+    projectName: 'getcha_frontend_docs',
 
     presets: [
         [
