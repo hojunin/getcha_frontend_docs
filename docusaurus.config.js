@@ -13,7 +13,7 @@ const config = {
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/getcha_favicon.ico',
-    organizationName: 'getcha', 
+    organizationName: 'getcha',
     projectName: 'getcha_frontend_docs',
 
     presets: [
@@ -119,31 +119,19 @@ const config = {
                                 label: '겟차',
                                 href: 'https://m.getcha.kr/',
                             },
-                            {
-                                label: '겟차 커머스',
-                                href: 'https://naver.com',
-                            },
-                            {
-                                label: '겟차 중고차',
-                                href: 'https://github.com',
-                            },
                         ],
                     },
                     {
                         title: '동료를 찾아요!',
                         items: [
                             {
-                                label: '복지 & 동료',
-                                to: '/blog',
-                            },
-                            {
                                 label: '지원하러 가기',
-                                href: 'https://github.com/facebook/docusaurus',
+                                href: 'https://www.wanted.co.kr/wd/100800',
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} Getcha Team`,
+                copyright: `Copyright © ${new Date().getFullYear()} Getcha Frontend Chapter`,
             },
             prism: {
                 theme: lightCodeTheme,
