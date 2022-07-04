@@ -7,19 +7,19 @@ tags: [react, react-query]
 
 안녕하세요. Getcha 프론트엔드 개발자 **Nick**입니다 😜
 
-지난주 내내 Getcha 8.2.0 마이너 업데이트를 앞두고 좋은 유저경험을 위한 라이브러리를 다양하게 설치 및 테스트가 한창이었습니다. 하지만 기쁜 마음도 잠시, 분명 UI 라이브러리를 설치중이었는데 redux-saga가 동작을 멈춰버리는 기이한 현상을 맞이했습니다. 라이브러리 마이너 패치도 3년전이고, 이슈는 이유를 알 수도 없었습니다(연관성이 1도 없었습니다 ㅠ)
+지난주 내내 Getcha 8.2.0 마이너 업데이트를 앞두고 좋은 유저경험을 위한 라이브러리를 다양하게 설치 및 테스트가 한창이었습니다. 하지만 기쁜 마음도 잠시, 분명 UI 라이브러리를 설치중이었는데 redux-saga가 동작을 멈춰버리는 기이한 현상이 발생했습니다. saga 라이브러리 마이너 패치는 3년전이고, 이슈는 이유를 알 수도 없었습니다(연관성이 1도 없었습니다 😇)
 
-결국 Saga에 더이상 의존할 수 없다고 _CTO님, 챕터원들과 논의 후_ 판단하여 React-Query 전면 도입을 결정하고 Saga를 빠르게 걷어내기로 했습니다.
+결국 Saga에 더이상 의존할 수 없다고 판단하여 _CTO님, 챕터원들과 논의 후_ React-Query 전면 도입을 결정하고 Saga를 빠르게 걷어내기로 했습니다.
 
 ![으아악](0.png)
 
-Saga 걷어내기 작업에 앞서, **react query**를 효율적으로 활용할 수 있는 방법이 필요합니다. 현재 작성되어있는 useQuery Wrapper 함수가 있긴 한데, 몇몇 부분에서 비효율적이고 type safe하지 않다고 생각했기 때문에 전면 수정을 결정한 이상 최적의 모델을 찾고, 이를 활용한 boilerplate를 만들어 공유하는 작업이 선행되어야 했습니다.
+본격적으로 Saga 걷어내기 작업에 앞서, **react query**를 효율적으로 활용할 수 있는 방법이 필요했습니다. 현재 작성되어있는 `useQuery Wrapper` 함수가 있긴 한데, 몇몇 부분에서 비효율적이고 **type safe**하지 않다고 생각했기 때문에 전면 수정을 결정한 이상 최적의 모델을 찾고, 이를 활용한 boilerplate를 만들어 공유하는 작업이 선행되어야 했습니다.
 
-:::info 이번에 만들 부분은 다음과 같은 형태가 되어야합니다.
+:::info 생각해야 할 부분은 다음과 같았습니다.
 
--   **type-safe** 해야한다.
--   계발 레벨에서 생산성이 높아야한다.
--   호출 레벨에서 신경쓰지 않아도 되는 부분은 걷어내야한다.
+- **type-safe** 해야한다.
+- 계발 레벨에서 생산성이 높아야한다.
+- 호출 레벨에서 신경쓰지 않아도 되는 부분은 걷어내야한다.
 
 :::
 
@@ -33,40 +33,40 @@ Saga 걷어내기 작업에 앞서, **react query**를 효율적으로 활용할
 
 ```tsx
 const useBaseQueryApi = <Res, Req = undefined>(
-    key: TQueryKey<Req> | string,
-    config?: IConfig<TQueryConfig<Res, Req>>,
+  key: TQueryKey<Req> | string,
+  config?: IConfig<TQueryConfig<Res, Req>>
 ) => {
-    // [url, parameters] 형태로 넘어왔는지 여부
-    const isKeyArray = Array.isArray(key) && key.length > 1;
+  // [url, parameters] 형태로 넘어왔는지 여부
+  const isKeyArray = Array.isArray(key) && key.length > 1;
 
-    // error 처리
-    const error = useRef(undefined);
-    const isError = useRef(false);
+  // error 처리
+  const error = useRef(undefined);
+  const isError = useRef(false);
 
-    // baseFetch : Axios 인스턴스
-    const apiFetcher = baseFetch((ex: any) => {
-        error.current = ex;
-        isError.current = true;
-    });
+  // baseFetch : Axios 인스턴스
+  const apiFetcher = baseFetch((ex: any) => {
+    error.current = ex;
+    isError.current = true;
+  });
 
-    // url, params
-    const url = (isKeyArray ? key[0] : key) as string;
-    const params = (isKeyArray ? key[1] : undefined) as Req;
+  // url, params
+  const url = (isKeyArray ? key[0] : key) as string;
+  const params = (isKeyArray ? key[1] : undefined) as Req;
 
-    // react-query 실행
-    const result = useQuery(
-        key,
-        async () => {
-            return apiFetcher<Res, Req>(url, params, config?.axiosConfig);
-        },
-        config?.queryConfig,
-    ) as UseQueryResult<Res, Error>;
+  // react-query 실행
+  const result = useQuery(
+    key,
+    async () => {
+      return apiFetcher<Res, Req>(url, params, config?.axiosConfig);
+    },
+    config?.queryConfig
+  ) as UseQueryResult<Res, Error>;
 
-    return {
-        ...result,
-        error: error.current,
-        isError: isError.current,
-    };
+  return {
+    ...result,
+    error: error.current,
+    isError: isError.current,
+  };
 };
 ```
 
@@ -88,29 +88,27 @@ const useBaseQueryApi = <Res, Req = undefined>(
 
 > cache의 일부분
 
-현재 `key`는 `queryFucntion`의 Endpoint로 관리되고 있는데, 이건 현재의 방식을 조금 수정해서 사용하면 될 것 같습니다. 다만, 저희가 baseUrl을 3개를 쓰고 있는데, 이 부분은 `queryClient`를 정의할 때가 아닌 `queryFunction` 레벨에서 정의되어야 할 것 같습니다.
+현재 `key`는 `queryFucntion`의 Endpoint로 관리되고 있는데, 이건 현재의 방식을 조금 수정해서 사용하면 될 것 같습니다. 다만, 저희가 `version`과 `baseUrl`을 각각 3개씩 쓰고 있는데, 이 부분은 `queryClient`를 정의할 때가 아닌 `queryFunction` 레벨에서 정의되어야 할 것 같습니다.
 
-또한 api version이 backend의 요구에 맞추어 7, 7.1, 7.2로 나눠져 있는데 이 부분까지 EndPoint에 녹아있으므로 같이 관리하면 좋을 듯 합니다.
+:::tip 이런 형태도 생각해볼 수 있습니다.
 
-:::tip ❓ 만약 현재의 구조를 그대로 유지한다고 한다면?
-
-동일한 쿼리가 `v7`, `v7.1`, `v7.2`에서 각각 다르게 동작한다면 구조가 바뀔겁니다. 버전 또한 받도록 변경되어야겠죠. `baseUrl` 또한 그렇습니다. `version`-`baseUrl`-`endPoint`로 쿼리함수가 정해지니까요. 이런 복잡성이 존재하는 한, 추상화 레벨을 `queryFunction` 단위로 정하고 관리하는 편이 좋겠습니다.
+`version`-`baseUrl`-`endPoint`로 쿼리함수가 정해지니까, 이 형태로 tree를 만들 수 있습니다.
 
 :::
 
-다만, key 자체는 우리가 const를 정의하듯, queryFunction 이름을 정하듯 한눈에 들어오는 이름을 사용하는게 좋아보입니다. 가령 위에서 `communityNotice, {forumId: 1}`이 `v7/car/compare/car-call`보다는 낫습니다. 왜냐하면 endpoint는 endpoint일 뿐 key가 아니고, 그냥 endpoint를 key로 활용하는 것 뿐이니까요.
+다만, key 자체는 우리가 constant를 정의하듯, `queryFunction` 이름을 정하듯 한눈에 들어오는 이름을 사용하는게 좋아보입니다. 가령 위에서 `communityNotice, {forumId: 1}`이 `v7/car/compare/car-call`보다는 낫습니다. 왜냐하면 endpoint는 endpoint일 뿐 key가 아니고, 그냥 endpoint를 key로 활용하는 것 뿐이니까요.
 
 또한 parameter는 key와 분리해서 array로 관리되어야 합니다.
 
 ### type
 
-현재는 데이터가 리턴하는 데이터의 타입을 사용부에서 제네릭으로 적용합니다. 그렇기 때문에 type-safe하지 않습니다. 이 부분은 더 낮은 레벨인 `queryFunction` 레벨에서 정의되어야 합니다. queryFunction이 리턴하는 데이터는 서버로부터 정의되기 때문에 서버만 정확히 작동하면 **명확**하고, type-safe하기 때문입니다.
+현재는 데이터가 리턴하는 데이터의 타입을 사용부에서 제네릭으로 적용합니다. 그렇기 때문에 **type-safe**하지 않습니다. 이 부분은 더 낮은 레벨인 `queryFunction` 레벨에서 정의되어야 합니다. **queryFunction**이 리턴하는 데이터는 서버로부터 정의되기 때문에 서버만 정확히 작동하면 **명확**하고, **type-safe**하기 때문입니다.
 
 ![스크린샷 2022-07-03 오후 11.38.12.png](3.png)
 
-위 사진은 현재 활용중인 useQueryApi입니다. Response Type이 `IResCarCompareAll`이라는 타입의 데이터로 assersion 되고 있습니다. useQueryApi 코드를 확인해보면 `queryFunction`의 입출력 타입과 관계없이 해당 useQuery의 Response Type으로 대입해버립니다.
+위 사진은 현재 활용중인 `useQueryApi`입니다. Response Type이 `IResCarCompareAll`이라는 타입의 데이터로 assersion 되고 있습니다. `useQueryApi` 코드를 확인해보면 `queryFunction`의 입출력 타입과 관계없이 해당 useQuery의 Response Type으로 대입해버립니다.
 
-하지만 useQuery의 Response Type은 queryFunction의 Response Type에 종속되므로, useQuery의 Response Type은 queryFunction의 Response를 받아서 사용해야합니다.
+하지만 useQuery의 Response Type은 `queryFunction`의 Response Type에 종속되므로, useQuery의 Response Type은 queryFunction의 Response를 받아서 사용해야합니다.
 
 ![스크린샷 2022-07-03 오후 11.54.34.png](4.png)
 
@@ -119,7 +117,7 @@ const useBaseQueryApi = <Res, Req = undefined>(
 저희 서비스는 Axios 인스턴스를 3개나 사용하는 특수한 상황에 놓여있습니다. 그래서 `useQuery` 훅 내에서 axios 설정 및 관리를 할 필요가 없다고 생각합니다. 또한 useQuery는 axios랑 관련이 없기 때문에 더더욱 의존성을 덜어내야 할 부분입니다.
 
 :::caution
-axios는 queryFunction과 관련있습니다.
+axios는 `queryFunction`과 관련있습니다.
 :::
 
 즉, 현재 상태에서 `useQuery`는 Api Client의 옵션을 받을 필요가 없습니다. 이 부분은 `queryFunction`의 영역이기 때문에 `queryFunction` 정의 부분에서 명확히 정의되어야 합니다.
@@ -132,29 +130,31 @@ axios는 queryFunction과 관련있습니다.
 
 ![제안하는 방식](5.png)
 
-제안하는 방식
+> 제안하는 방식
 
 1. key와 parameter를 useQuery에 넘긴다.
 2. useQueryApi는 keyMap에서 queryFunction을 조회해서 함수를 가져온다.
 3. queryFunction에 parameter를 넘겨 useQuery 호출하면 type이 보장된 데이터를 받을 수 있다.
 
+과정만 보면 현재 사용방식과 크게 다른점이 없지만, key의 값이 현재와 같이 endpoint가 아닌 specific한 문자열이 되고 그 문자열은 fetch 함수와 연결되어 있다는 차이점이 있습니다.
+
 ### useQueryApi
 
 ```tsx
-import { queryMap } from 'queryMap';
+import { queryMap } from "queryMap";
 
 const useQueryApi = (keys, params, config) => {
-    const queryKey = [...keys, params.toString()];
+  const queryKey = [...keys, params.toString()];
 
-    if (!queryMap.has(keys)) {
-        throw new Error('쿼리함수가 정의 되어있지 않습니다');
-    }
+  if (!queryMap.has(keys)) {
+    throw new Error("쿼리함수가 정의 되어있지 않습니다");
+  }
 
-    return useQuery({
-        ...config,
-        queryKey,
-        queryFn: queryMap.get(keys),
-    });
+  return useQuery({
+    ...config,
+    queryKey,
+    queryFn: queryMap.get(keys),
+  });
 };
 ```
 
@@ -169,13 +169,17 @@ const useQueryApi = (keys, params, config) => {
 ```tsx
 // Car 데이터를 가져오는 쿼리.
 const useFetchCar = () => {
-    const { data: cars, isError } = useQueryApi(['carList'], { page: 0 }, { enabled: false });
+  const { data: cars, isError } = useQueryApi(
+    ["carList"],
+    { page: 0 },
+    { enabled: false }
+  );
 
-    if (isError || cars.length === 0) {
-        toast.show('차량 데이터에 문제가 발생했어요.');
-    }
+  if (isError || cars.length === 0) {
+    toast.show("차량 데이터에 문제가 발생했어요.");
+  }
 
-    return cars.filter((car) => !car.disable);
+  return cars.filter((car) => !car.disable);
 };
 ```
 
@@ -207,13 +211,18 @@ key-callback 조합은 현재의 Constant 관리방법처럼 매우 길어질 �
 
 ### error 처리
 
-에러가 발생하면 어떻게 처리할까
+react query를 호출하는 과정에서 발생하는 에러에 대한 처리도 같이 해주면 좋겠습니다.
 
-error 센터를 만들자. 여기서는 react query가 던지는 표준에러와 그 에러를 어떻게 처리할지에 대한 콜백함수를 같이 받습니다.
+저는 앱 내의 모든 에러를 처리하는 **error center**를 만들면 좋을 것 같습니다. 여기서는 react query가 던지는 표준에러와 그 에러를 어떻게 처리할지에 대한 콜백함수를 같이 받습니다.
 
-처리 콜백함수가 들어오면 그 콜백함수 로직을 먼저 타도록 합니다.
+:::tip 간단한 예시
 
-처리 콜백함수가 들어오지 않거나 처리 콜백함수를 전부 통과했는데도 에러가 처리되지 않으면, 기본 에러 처리 기준에 따라 처리합니다. 예를 들어 404면 페이지가 없습니다로 리다이렉팅, 500이면 서버가 죽었어요. 503이면 와이파이 확인하세요 ….
+- 에러 처리 콜백 함수가 들어오면 그 기준에 따라 에러를 처리합니다.
+- 에러 처리 콜백함수가 들어오지 않으면 기본 에러 처리 기준에 따라 처리합니다.
+- 콜백함수를 전부 통과했는데도 에러가 처리되지 않았을 때는 어떤 처리를 합니다.
+- **404**면 페이지가 없습니다로 리다이렉팅, **500**이면 서버가 죽었어요. **503**이면 와이파이 확인하세요 ….
+
+:::
 
 ### nullCheck & typeGuard
 
@@ -223,11 +232,11 @@ useQuery의 데이터를 사용부에 전달하기 전에 최종확인 과정으
 
 1. null check
 
-    null checking 과정에서는 data가 undefined인지 체크합니다. array여야하는 데이터가 비어있더라도 array인지 까지 확인합니다.
+   null checking 과정에서는 data가 undefined인지 체크합니다. array여야하는 데이터가 비어있더라도 array인지 까지 확인합니다.
 
 2. type guard
 
-    null check 과정을 거치고 나면 이 데이터가 실제 해당하는 타입인지를 알아야 합니다. id나 title 같은 필수 데이터 타입이 존재하는지, 일정 크기 이상인지 등을 확인해서 type-safe한지 마지막으로 확인합니다.
+   null check 과정을 거치고 나면 이 데이터가 실제 해당하는 타입인지를 알아야 합니다. id나 title 같은 필수 데이터 타입이 존재하는지, 일정 크기 이상인지 등을 확인해서 type-safe한지 마지막으로 확인합니다.
 
 위 두개 과정을 통과했다면 비로소 해당 데이터는 type-safe하므로 렌더링 부에 전달할 수 있습니다.
 
