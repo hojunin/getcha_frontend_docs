@@ -67,12 +67,12 @@ const config = {
         ({
             metadata: [{ name: 'Keywords', content: '겟차, 프론트엔드, 겟차 프론트엔드' }],
             // algolia: {
-            //   appId: "1AE76JL4OP",
-            //   apiKey: "e0f179e8ee37140bb5a083e9d4baaf67",
-            //   indexName: "getcha-frontend",
-            //   contextualSearch: true,
-            //   searchParameters: {},
-            //   searchPagePath: "search",
+            //     appId: '1AE76JL4OP',
+            //     apiKey: 'e0f179e8ee37140bb5a083e9d4baaf67',
+            //     indexName: 'getcha-frontend',
+            //     contextualSearch: true,
+            //     searchParameters: {},
+            //     searchPagePath: 'search',
             // },
             navbar: {
                 title: '겟차 프론트엔드 챕터',
@@ -87,11 +87,11 @@ const config = {
                         position: 'left',
                         label: '앱',
                     },
-                    {
-                        to: '/web-docs/intro',
-                        label: '웹',
-                        position: 'left',
-                    },
+                    // {
+                    //     to: '/web-docs/intro',
+                    //     label: '웹',
+                    //     position: 'left',
+                    // },
                     {
                         to: '/utils-docs/intro',
                         label: '유틸',
@@ -103,10 +103,6 @@ const config = {
                         label: '겟차 UI Components',
                         position: 'right',
                     },
-                    // {
-                    //   type: "localeDropdown",
-                    //   position: "right",
-                    // },
                 ],
             },
             footer: {
@@ -118,6 +114,10 @@ const config = {
                             {
                                 label: '겟차',
                                 href: 'https://m.getcha.kr/',
+                            },
+                            {
+                                label: '리액트 쿼리 번역 프로젝트',
+                                href: 'https://hojunin.github.io/react-query-kr/',
                             },
                         ],
                     },

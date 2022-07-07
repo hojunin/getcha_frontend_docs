@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: 입력
+title: 입력 (Input)
 ---
 
 # 입력 컴포넌트
@@ -30,28 +30,28 @@ Getcha Design Guide - Input
 부모 컴포넌트에서 state를 넘겨서 활용하는 사용방법입니다.
 
 ```tsx
-import { Input } from "getcha-component/native";
+import { Input } from 'getcha-component/native';
 
 const SearchBar = () => {
-  const [value, setValue] = useState<string | undefined>("");
-  return <Input value={value} setValue={setValue} type={"password"} />;
+    const [value, setValue] = useState<string | undefined>('');
+    return <Input value={value} setValue={setValue} type={'password'} />;
 };
 ```
 
 ### ref를 활용한 방법
 
 ```tsx
-import { Input } from "getcha-component/native";
+import { Input } from 'getcha-component/native';
 
 const SearchBar = () => {
-  const inputRef = useRef<InputRefType>(null);
+    const inputRef = useRef<InputRefType>(null);
 
-  // input에 포커스
-  const focusInput = inputRef.currunt.focus();
-  // input값 가져오기
-  const getInputValue = inputRef.current.getValue();
+    // input에 포커스
+    const focusInput = inputRef.currunt.focus();
+    // input값 가져오기
+    const getInputValue = inputRef.current.getValue();
 
-  return <Input ref={inputRef} type={"password"} />;
+    return <Input ref={inputRef} type={'password'} />;
 };
 ```
 

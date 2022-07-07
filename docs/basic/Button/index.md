@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-title: 버튼
+title: 버튼 (Button)
 ---
 
 # 버튼
