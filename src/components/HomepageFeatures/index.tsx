@@ -72,6 +72,7 @@ export default function HomepageFeatures(): JSX.Element {
               key={content.title}
               title={content.title}
               description={content.description}
+              image={content.image}
             />
           ))}
         </div>
