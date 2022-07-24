@@ -24,7 +24,7 @@
 .boxRow {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 5rem 0px;
 }
 
@@ -99,4 +99,11 @@
   border-radius: 10px;
   font-weight: bold;
   font-size: 18px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
 }
