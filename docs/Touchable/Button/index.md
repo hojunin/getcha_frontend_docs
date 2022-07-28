@@ -5,7 +5,7 @@ title: 버튼 (Button)
 
 # 버튼
 
-Getcha 서비스 내에서 사용되는 버튼 컴포넌트입니다. [Touchable](../../basic/Touchable/index.md)의 구현체입니다.
+Getcha 서비스 내에서 사용되는 버튼 컴포넌트입니다.
 
 :::info
 
