@@ -1,6 +1,6 @@
 ---
 sidebar_position: 4
-title: 구분선 (Divider)
+title: 로딩 (Loading)
 ---
 
 # 로딩 (Loading)

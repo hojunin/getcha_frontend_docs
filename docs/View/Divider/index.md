@@ -9,7 +9,7 @@ title: 구분선 (Divider)
 
 :::info
 
-[겟차 디자인 시스템 - 버튼](https://zeroheight.com/759a9cc46/p/6706c5-layout/b/67179c)을 기반으로 만들어졌습니다.
+[겟차 디자인 시스템 - 디바이더](https://zeroheight.com/759a9cc46/p/6706c5-layout/b/67179c)을 기반으로 만들어졌습니다.
 
 :::
 

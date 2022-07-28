@@ -3,7 +3,7 @@ sidebar_position: 2
 title: 팝업 (Popup)
 ---
 
-# 팝업 모달
+# 팝업
 
 팝업 모달은 사용자의 선택이나 되물음 같은 중요한 상호작용을 재확인하는 용도로 사용되는 모달 컴포넌트입니다.
 
@@ -40,14 +40,14 @@ return (...
 ### 사용부 - 단순 텍스트를 넣는 경우
 
 ```tsx
-import { Popup } from 'Getcha-UI-Toolkit';
+import { Popup } from "Getcha-UI-Toolkit";
 
 Popup.show({
-    title: '게시글 삭제',
-    description: '이 행동은 되돌릴 수 없어요.\n 삭제하시겠습니까?',
-    leftButtonTitle: '취소',
-    rightButtonTitle: '삭제하기',
-    rightButtonPressed: deletePost,
+  title: "게시글 삭제",
+  description: "이 행동은 되돌릴 수 없어요.\n 삭제하시겠습니까?",
+  leftButtonTitle: "취소",
+  rightButtonTitle: "삭제하기",
+  rightButtonPressed: deletePost,
 });
 ```
 

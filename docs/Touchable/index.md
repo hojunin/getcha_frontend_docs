@@ -1,9 +1,9 @@
 ---
-sidebar_position: 4
-title: 클릭커블 뷰 (Touchable)
+sidebar_position: 1
+title: 클릭커블 뷰 (Touchable Class)
 ---
 
-## 클릭커블 뷰(Touchable)
+## 클릭커블 뷰(Touchable Class)
 
 클릭커블 뷰는 [React Native의 Pressable](https://reactnative.dev/docs/pressable) 컴포넌트에 기본 기능을 결합한 컴포넌트입니다.
 
