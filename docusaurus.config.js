@@ -66,7 +66,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [
-        { name: "Keywords", content: "겟차, 프론트엔드, 겟차 프론트엔드" },
+        {
+          name: "Keywords",
+          content:
+            "겟차, 프론트엔드, 겟차 프론트엔드, 기술블로그, 기술, 겟차 기술 블로그, 겟차 프론트엔드 기술 블로그",
+        },
       ],
       algolia: {
         appId: "1AE76JL4OP",
