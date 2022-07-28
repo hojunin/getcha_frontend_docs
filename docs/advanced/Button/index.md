@@ -1,17 +1,23 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 title: 버튼 (Button)
 ---
 
 # 버튼
 
-Getcha 서비스 내에서 사용되는 버튼 컴포넌트입니다.
+Getcha 서비스 내에서 사용되는 버튼 컴포넌트입니다. [Touchable](../../basic/Touchable/index.md)의 구현체입니다.
+
+:::info
+
+[겟차 디자인 시스템 - 버튼](https://zeroheight.com/759a9cc46/p/926fa5-button/b/32e1a2)을 기반으로 만들어졌습니다.
+
+:::
 
 ## 사진
 
 ---
 
-이곳에는 Case 단위 사진과 설명이 들어갑니다.
+![버튼 사진](1.png)
 
 ## 사용법
 
