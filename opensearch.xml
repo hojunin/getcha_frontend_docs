@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
+                       xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>🚘 겟차 프론트엔드 챕터입니다</ShortName>
+  <Description>Search 🚘 겟차 프론트엔드 챕터입니다</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16" type="image/x-icon">https://hojunin.github.io/getcha_frontend_docs/img/getcha_favicon.ico</Image>
+  <Url type="text/html" method="get" template="https://hojunin.github.io/getcha_frontend_docs/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://hojunin.github.io/getcha_frontend_docs/opensearch.xml" />
+  <moz:SearchForm>https://hojunin.github.io/getcha_frontend_docs/</moz:SearchForm>
+</OpenSearchDescription>

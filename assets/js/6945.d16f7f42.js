@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgetcha_frontend=self.webpackChunkgetcha_frontend||[]).push([[6945],{6945:function(e,n,t){t.r(n)}}]);
